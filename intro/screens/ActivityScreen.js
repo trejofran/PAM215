@@ -6,7 +6,7 @@ export default function IndicatorScreen() {
   
     return (
       <View>
-        <Text>Proximamente por Leonel </Text>
+        <Text>Proximamente por Dulce </Text>
       </View>
     )
   }
