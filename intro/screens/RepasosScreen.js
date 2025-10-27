@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, Alert, ImageBackground, Animated, Easing, Switch, StyleSheet } from 'react-native';
 
-export default function RegistroScreen() {
+export default function RepasosScreen() {
   const [loading, setLoading] = useState(true);
   const fadeAnim = new Animated.Value(1);
 
@@ -74,9 +74,10 @@ export default function RegistroScreen() {
 
   return (
     <ImageBackground
-      source={require('../assets/gato.png')}
-      style={styles.background}
+      source={require('../assets/gato.jpg')}
       resizeMode="cover"
+      style={styles.background}
+      
     >
       <View style={styles.formWrapper}>
         <Text style={styles.header}>Registro de Usuario</Text>
@@ -102,7 +103,7 @@ export default function RegistroScreen() {
           <Switch
             value={acceptedTerms}
             onValueChange={() => setAcceptedTerms(!acceptedTerms)}
-            trackColor={{ true: 'green', false: 'gray' }}
+            trackColor={{ true: 'white', false: 'gray' }}
           />
         </View>
 
@@ -115,8 +116,11 @@ export default function RegistroScreen() {
 const styles = StyleSheet.create({
   background: { 
     flex: 1,
-    justifyContent: 'center', 
-    alignItems: 'center' 
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    height: '100%',
+
   },
   splashWrapper: { 
     flex: 1,

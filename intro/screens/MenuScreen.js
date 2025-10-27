@@ -9,7 +9,7 @@ import IndicatorScreen from './ActivityScreen';
 import FlatListScreen from './FlatlistScreen';
 import ModalScreen from './ModalScreen';
 import BottomScreen from './BottomScreen';
-import repasoScreen from './RepasosScreen'; 
+import RepasosScreen from './RepasosScreen'; 
 
 
 export default function MenuScreen() {
