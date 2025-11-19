@@ -20,6 +20,8 @@ export default function MenuScreen() {
 
         case 'Contador':
             return <ContadorScreen/>;
+        case 'Activity':
+            return <IndicatorScreen/>;
         case 'Botones':
             return <BotonesScreen/>;
         case 'Texto':
@@ -43,6 +45,7 @@ export default function MenuScreen() {
             <View>
                 <Text>Menu de practicas </Text>
                 <Button onPress={()=>setScreen('Contador')} title='Pract:Contador'/>
+                <Button onPress={()=>setScreen('Activity')} title='Pract:Activity'/>
                 <Button onPress={()=>setScreen('Botones')} title='Pract:Buttons'/>
                 <Button onPress={()=>setScreen('Texto')} title='Pract:Text'/>
                 <Button onPress={()=>setScreen('Image')} title='Pract:Image'/>

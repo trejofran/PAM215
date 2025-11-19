@@ -11,5 +11,5 @@ export default function BottomScreen() {
     )
   }
 
-
 const styles = StyleSheet.create({})
+

@@ -3,7 +3,6 @@ import React,{useState} from 'react';
 
 
 
-
 export default function TextInputAlertScreen() {
   const [nombre, setNombre]= useState('');
   const [password, setPassword]= useState('');
