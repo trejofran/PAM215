@@ -98,6 +98,13 @@ export default function UsuarioView() {
           )}
         </TouchableOpacity>
       </View>
+         <View style={styles.listHeader}>
+        <Text style={styles.listTitle}>Lista de Usuarios</Text>
+        <TouchableOpacity onPress={cargarUsuarios} style={styles.reloadButton}>
+          <Text style={styles.reloadText}>Recargar</Text>
+        </TouchableOpacity>
+      </View>
+
 
       {loading ? (
         <ActivityIndicator size="large" color="#007BFF" style={styles.loader} />
@@ -223,4 +230,23 @@ const styles = StyleSheet.create({
     color: '#999',
     marginTop: 50,
   },
+  listHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 15,
+  },
+  listTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#333',
+  },
+  reloadButton: {
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+  },
+  reloadText: {
+    color: '#007BFF',
+    fontSize: 16,
+    fontWeight: '500',}
 });
