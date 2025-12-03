@@ -7,8 +7,20 @@ import { Ionicons } from '@expo/vector-icons';
 import Home from './screens/home';
 import Profile from './screens/profile';
 import Settings from './screens/settings';
+import Detalle from './screens/detalle';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
+
+function ProfileStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="ProfileMain" component={Profile} options={{ headerShown: false }} />
+      <Stack.Screen name="Detalle" component={Detalle} options={{ title: 'Detalle' }} />
+    </Stack.Navigator>
+  );
+}
 
 export default function App() {
   return (
@@ -37,7 +49,7 @@ export default function App() {
         })}
       >
         <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Profile" component={Profile} />
+        <Tab.Screen name="Profile" component={ProfileStack} />
         <Tab.Screen name="Settings" component={Settings} />
       </Tab.Navigator>
     </NavigationContainer>
